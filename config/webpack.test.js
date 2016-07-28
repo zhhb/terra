@@ -17,7 +17,11 @@ module.exports = {
 
             },
             {
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?[a-z0-9=&.]+)?$/,
+                loader: 'null'
+            },
+            {
+                test: /\.less$/,
                 loader: 'null'
             },
             {
