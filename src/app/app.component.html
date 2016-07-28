@@ -1,5 +1,6 @@
-<main>
-    <h1>Boilerplate For Angular 2 App with Webpack</h1>
-    <img src="../../public/images/angular2.png">
-    <h2>Heading Better Web Development</h2>
-</main>
+<h1>{{title}}</h1>
+<nav>
+    <a [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
+    <a [routerLink]="['/heroes']" routerLinkActive="active">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
