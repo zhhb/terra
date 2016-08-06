@@ -1,0 +1,209 @@
+.navbar{
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    box-shadow: 0 0 10px #ccc;
+    background-color: #004994;
+}
+
+.navbar-brand{
+    padding: 0;
+}
+
+.navbar-brand img{
+    height: 48px;
+}
+
+.navbar-message{
+    display: inline-block;
+}
+
+.navbar-message>a{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+    cursor: pointer;
+    z-index: 10;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 50px;
+}
+
+@keyframes wave {
+    5% {
+        opacity: .1
+    }
+    20% {
+        opacity: .4
+    }
+    30% {
+        transform: scale(1.6);
+        opacity: .2
+    }
+    45% {
+        transform: scale(1);
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+.navbar-message>a:hover:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background-image: radial-gradient(farthest-side circle at center center, rgba(26, 175, 93, 0) 70%, #f5f5f5 100%);
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    border-radius: 50%;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    animation: wave 5s 1s infinite linear;
+}
+
+.navbar-message>a i{
+    font-size: 16px;
+    color: #fff;
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navbar-message>a:hover i{
+    transform: scale(1.2);
+}
+
+.navbar-account{
+    display: inline-block;
+    margin-right: -15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.navbar-account>a {
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.navbar-account>a img{
+    width: 30px;
+    margin-right: 10px;
+    position: relative;
+    top: -1px;
+}
+
+.navbar-account>a span{
+    color: #fff;
+}
+
+.navbar-account.open:after {
+    content: '';
+    width: 188px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #004994;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes dropdownSlideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.navbar-account>ul{
+    left: initial;
+    right: 0;
+    width: 188px;
+    padding: 0;
+    margin-top: 0;
+    border-radius:0;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
+    border: none;
+    animation: dropdownSlideInDown .3s;
+}
+
+.navbar-account>ul:after {
+    content: '';
+    display: inline-block;
+    right: 0;
+    position: absolute;
+    width: 188px;
+    background-color: #fff;
+    border: 0;
+    top: -50px;
+    height: 3px;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-account>ul li{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f5f5f5;
+    position: relative;
+}
+
+.navbar-account>ul li:last-of-type{
+    border-bottom: none;
+}
+
+.navbar-account .usermail{
+    font-size: 12px;
+    color: #d0d0d0;
+}
+
+.navbar-account .avatar img{
+    height: 128px;
+}
+
+.navbar-account .avatar .caption{
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    bottom: 10px;
+    width: 128px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #4A4A4A;
+    filter: alpha(opacity=70);
+    opacity: .7;
+    cursor: pointer;
+}
+
+.navbar-account>ul li.userprof,
+.navbar-account>ul li.exit{
+    padding: 6px 30px;
+    overflow: hidden;
+}
+
+.navbar-account .userprof a,
+.navbar-account .exit a{
+    display: inline-block;
+    padding: 3px 0;
+    font-size: 12px;
+    color: #999;
+    background-color: transparent;
+    clear: none;
+}
+
+.navbar-account .exit{
+    margin-top: -1px;
+    border-top: 3px solid #a2a2a2;
+}

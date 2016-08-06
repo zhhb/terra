@@ -40,6 +40,11 @@ module.exports = {
                 test: /\.css$/,
                 include: helpers.root('src', 'app'),
                 loader: 'raw'
+            },
+            {
+                test: /\.less$/,
+                include: helpers.root('src', 'app'),
+                loader: 'raw!autoprefixer-loader?browsers=last 2 versions!less'
             }
         ]
     },
