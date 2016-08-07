@@ -11,6 +11,6 @@ if (process.env.ENV === 'production') {
 }
 
 bootstrap(AppComponent, [
-    //appRouterProviders,
+    appRouterProviders,
     HTTP_PROVIDERS,
 ]);

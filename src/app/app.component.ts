@@ -10,9 +10,9 @@ import { SideBarComponent } from './sidebar/sidebar.component';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     directives: [
+        ROUTER_DIRECTIVES,
         NavHeadComponent,
         SideBarComponent,
-        ROUTER_DIRECTIVES
     ],
 })
 export class AppComponent {
