@@ -3,6 +3,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 import '../public/less/styles.less';
 
 import { NavHeadComponent } from './navbar/nav.head.component';
+import { SideBarComponent } from './sidebar/sidebar.component';
 
 @Component({
     selector: 'app',
@@ -10,6 +11,7 @@ import { NavHeadComponent } from './navbar/nav.head.component';
     styleUrls: ['./app.component.css'],
     directives: [
         NavHeadComponent,
+        SideBarComponent,
         ROUTER_DIRECTIVES
     ],
 })

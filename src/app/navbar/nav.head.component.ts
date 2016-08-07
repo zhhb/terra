@@ -3,9 +3,7 @@ import {
     OnInit,
     Input,
     HostListener,
-    ElementRef
 } from '@angular/core';
-import { CORE_DIRECTIVES } from '@angular/common';
 
 import { noBubble } from '../directives/common.directive';
 
@@ -13,13 +11,12 @@ import { noBubble } from '../directives/common.directive';
     selector: 'nav-head',
     templateUrl: './nav.head.component.html',
     styleUrls: ['./nav.head.component.css'],
-    directives: [CORE_DIRECTIVES, noBubble]
+    directives: [noBubble]
 })
 export class NavHeadComponent {
     isAcountDropDown: boolean = false;
 
-
-    constructor(private _eref: ElementRef) { }
+    constructor() { }
 
     @HostListener('document:click', ['$event'])
     onAcountBlur = (e: Event = window.event) => {
